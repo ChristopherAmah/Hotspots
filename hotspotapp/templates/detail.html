@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block title %}{{detail.name|title}} Hotels{% endblock title %}
+<!-- header  -->
+{% block header %} {% include 'header.html' %}{% endblock header %}
+<!-- header  -->
+
+<!-- welcome -->
+{% block welcome %}{% include 'welcome.html' %}{% endblock welcome %}
+<!-- welcome -->
+
+
+{% block content %}
+      <section class="info mt-5">
+        <div class="container">
+            <div class="text-center mb-3">
+                <h2><i class="fa-solid fa-location-pin"></i> {{detail.name|title}} Details</h2>
+            </div>
+
+            <div class="row justify-content-center gy-5 gx-4 ">
+                
+                
+                <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-4">
+                    <div class="card">
+                      <a href="#"><img src="{{detail.image.url}}" class="card-img-top"></a>
+                      <div class="card-body ">
+                        <h3 class="card-title">{{detail.name|title}}</h3>
+                        <h3 class="card-title">{{detail.location|title}}</h3>
+                        <p class="card-text">{{detail.price}}</p>
+                        <a href="#"><p class="card-text text-truncate">{{detail.details|title}}</p></a>
+                      </div>
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+        <hr>
+      </section>
+
+      {% endblock content %}
+    
+<!--- footer -->
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}
+<!--- footer done -->

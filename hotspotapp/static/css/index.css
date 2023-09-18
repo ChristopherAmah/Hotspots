@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: lightgrey;
+}
+.top{
+    height: 100vh;
+}
+.hotspot{
+    background: lightgrey;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+.hotspot .fa-user{
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+    background: white;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.hotspot .fa-user:hover{
+    transform: scale(1.5);
+}
+.hotspot .dropdown-menu{
+    background: lightgrey;
+}
+.hotspot .dropdown-menu .dropdown-item{
+    color: black;
+    font-weight: 500;
+}
+.hotspot .navbar-brand{
+    color: black;
+    font-weight: 800;
+}
+.hotspot .nav-item{
+    font-weight: 700;
+}
+.hotspot .navbar-toggler{
+    color: black;
+    border: none;
+    background: none;
+    transition: 0.5s;
+    box-shadow: none;
+}
+.hotspot .navbar-toggler:hover{
+    transform: scale(1.5)
+}
+/* navabar done */
+
+/* showcase */
+.showcase h2{
+    font-weight: 700;
+    line-height: 50px;
+}
+.showcase img{
+    height: 250px;
+    border-radius: 20px;
+}
+.showcase .card{
+    animation: mover 1s infinite alternate;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 3rem 1rem rgba(0, 0, 0, 0.2);
+}
+@keyframes mover{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(10px);}
+}
+.layer{
+    background: transparent;
+    height: 102%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 20px;
+    border: 2px solid lightgrey;
+}
+.layer:hover{
+    background: rgba(216, 191, 216, 0.888);
+    border: 2px solid black;
+}
+.layer h3{
+    width: 100%;
+    font-weight: 1000;
+    color: black;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+.showcase .btn{
+    padding: 10px 25px 10px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    border: 2px solid black;
+    background: black;
+}
+.showcase .btn:focus{
+    box-shadow: none !important;
+}
+.showcase .btn:hover{
+    border: 2px solid lightgrey !important;
+    background: black !important;
+    color: lightgrey;
+    transition: 0.6s;
+}
+.showcase .btn .fa{
+    margin-right: 10px;
+}
+
+
+.content {
+    margin-top: -15px;
+    height: 160px;
+    overflow:hidden;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px;
+    color: black;
+}
+.container__container {
+    font-weight: 600;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 40px;
+}   
+.content__container__text {
+    display: inline;
+    float: left;
+    margin: 0;
+}
+.content__container__list {
+    margin-top: 0;
+    padding-left: 110px;
+    list-style: none;
+
+    -webkit-animation-name: change;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.content__container__list__item {
+    line-height:40px;
+    margin:0;
+}
+      
+    
+  
+  
+@-webkit-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+}
+
+@-webkit-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@-o-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+}
+
+@-o-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+  
+@-moz-keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+}
+
+@-moz-keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+@keyframes opacity {
+    0%, 100% {opacity:0;}
+    50% {opacity:1;}
+}
+
+@keyframes change {
+    0%, 12.66%, 100% {transform:translate3d(0,0,0);}
+    16.66%, 29.32% {transform:translate3d(0,-25%,0);}
+    33.32%,45.98% {transform:translate3d(0,-50%,0);}
+    49.98%,62.64% {transform:translate3d(0,-75%,0);}
+    66.64%,79.3% {transform:translate3d(0,-50%,0);}
+    83.3%,95.96% {transform:translate3d(0,-25%,0);}
+}
+
+
+
+/* info */
+.info h2{
+    font-weight: 700;
+}
+.info h2 i{
+    color: white;
+}
+.info .card img{
+    height: 250px;
+    transition: .5s;
+}
+.info .card img:hover{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.info .card{
+    height: 350px;
+    transition: .5s;
+}
+.info .card:hover{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 2px solid black;
+}
+
+.footer h5{
+    font-weight: 650;
+}
+.footer h5 span{
+    font-weight: 800;
+}
+.footer h6 a{
+    color: black;
+    text-decoration: none;
+    /* transition: .5s; */
+}
+.footer h6 a:hover{
+    color: black;
+    text-decoration: 2px white underline;
+}

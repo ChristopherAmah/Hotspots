@@ -1,0 +1,16 @@
+<nav class="navbar navbar-light fixed-top mb-5 hotspot">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-auto" href="#">HoTSpoTs</a>
+  </div>
+</nav>
+
+
+
+  {% if messages %}
+    {% for item in  messages %}
+      <div class="alert alert-secondary text-black alert-dismissible fade show mb-0" role="alert">
+        <strong>{{item}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  {% endif %}

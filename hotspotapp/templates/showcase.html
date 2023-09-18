@@ -1,0 +1,41 @@
+<section class="showcase">
+    <div class="container">
+        <hr>
+       <div class="row justify-content-center gy-5 gx-4">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 col-xl-4">
+            <div class="text-center mb-3">
+                <h2>With Hotspots you can search for Affordable and Luxurious hotels around you!</h2>
+            </div>
+            <button type="button" class="btn btn-primary text-center"><i class="fa-brands fa-apple"></i> Download on iPhone</button>
+          <button type="button" class="btn btn-primary text-center"><i class="fa-brands fa-google-play"></i> Download on Android</button>
+        </div>
+        <div class="col-6 col-sm-8 col-md-3 col-lg-2 col-xl-4">
+            
+            
+            <div class="card">
+                {% if slide1 %}
+                <a href="#"><img src="{{slide1.show_img.url}}" class="card-img-top"></a>
+                <div class="card-body layer">
+                  <h3 class=" text-center">{{slide1.show_name}}</h3>
+                </div>
+                {% endif %}
+              </div>
+            
+                
+            
+            
+            <div class="card mt-5">
+                {% if slide2 %}
+                <a href="#"><img src="{{slide2.show_img.url}}" class="card-img-top"></a>
+                <div class="card-body layer">
+                  <h3 class=" text-center">{{slide2.show_name}}</h3>
+                </div>
+                {% endif %}
+              </div>
+            
+          </div> 
+    </div>
+    <hr>
+    </div>
+    
+</section>

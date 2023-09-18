@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Home{% endblock title %}
+<!-- header  -->
+{% block header %} {% include 'header.html' %}{% endblock header %}
+<!-- header  -->
+
+<!-- welcome -->
+{% block welcome %}{% include 'welcome.html' %}{% endblock welcome %}
+<!-- welcome -->
+
+<!-- showcase  -->
+{% block showcase %} {% include 'showcase.html' %}{% endblock showcase %}
+<!-- showcase  -->
+
+
+{% block content %}
+    
+
+    
+      <section class="info mt-5">
+        <div class="container">
+            <div class="text-center mb-3">
+                <h2><i class="fa-solid fa-location-pin"></i> LOCATIONS</h2>
+            </div>
+
+            <div class="row justify-content-center gy-5 gx-4 ">
+                
+                {% if locations %}
+                {% for item in locations %}
+                <div class="col-5 col-sm-4 col-md-3 col-lg-2 col-xl-4">
+                    <div class="card">
+                      <a href="{% url 'location' item.id %}"><img src="{{item.loc_image.url}}" class="card-img-top"></a>
+                      <div class="card-body ">
+                        <h3 class=" text-center">{{item.loc_name|title}}</h3>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <hr>
+      </section>
+
+      {% endblock content %}
+    
+<!--- footer -->
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}
+<!--- footer done -->

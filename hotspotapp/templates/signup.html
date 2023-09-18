@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %} Signup {% endblock title %}
+<!-- header  -->
+{% block header %} {% include 'loginheader.html' %}{% endblock header %}
+<!-- header  -->
+
+
+{% block content %}
+<div class="container  w-50 text-center">
+    <hr>
+  <div class="row">
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-2">
+
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8">
+            <div class="bg-white py-5 px-5">
+                <form action="{% url 'signup' %}" method="POST">
+                    {% csrf_token %}
+                        <h6 class="text-secondary">CREATE AN ACCOUNT</h6>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="username" name="username">
+                            <label for="floatingInput">Username</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="first name" name="first_name">
+                            <label for="floatingInput">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="last name" name="last_name">
+                            <label for="floatingInput">Last Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="email" name="email">
+                            <label for="floatingInput">Email Address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="location" name="location">
+                            <label for="floatingInput">Location</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="phone number" name="phone">
+                            <input type="hidden" name="image" value="dashboard/avatar.jpg">
+                            <label for="floatingInput">Phone Number</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="password" name="password1">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="confirm password" name="password2">
+                            <label for="floatingPassword">Confirm Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary text-center mt-2 mb-2"> Create your account</button>
+                    </div>
+                    <div class="login mt-2 mb-3">
+                        <h6>Already have an account?<a href="{% url 'signin' %}"> Login</a></h6>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        
+
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-2">
+
+        </div>
+  </div>
+  <hr>
+</div>
+
+
+{% endblock content %}
+
+
+<!--- footer -->
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}
+<!--- footer done -->

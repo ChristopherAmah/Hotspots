@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} Signin {% endblock title %}
+<!-- header  -->
+{% block header %} {% include 'loginheader.html' %}{% endblock header %}
+<!-- header  -->ock content %}
+<div class="container  w-50 text-center">
+    <hr>
+  <div class="row">
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-2">
+
+        </div>
+
+       
+            <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8">
+                <form class="form2" action="{% url 'signin' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="bg-white py-5 px-5">
+                        <h6 class="text-secondary">LOGIN</h6>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name= "username" id="floatingInput" placeholder="username">
+                            <label for="floatingInput">Username</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" name= "password" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                        <button type="submit" class="btn btn-secondary text-center mt-2 mb-2"> Login to your account</button>
+                    </div>
+                    <div class="login mt-2">
+                        <h6>Don't have an account?<a href="{% url 'signup' %}"> Sign up</a></h6>
+                        <p><a href="">Forgot password?</a> </p>
+                    </div>
+                </form>
+            </div>
+       
+            
+        
+
+        <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-2">
+
+        </div>
+  </div>
+  <hr>
+</div>
+
+
+{% bl
+
+{% endblock content %}
+
+
+<!--- footer -->
+{% block footer %} {% include 'footer.html' %}{% endblock footer %}
+<!--- footer done -->

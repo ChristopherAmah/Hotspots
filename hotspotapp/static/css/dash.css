@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbox{
+    height: 60vh;
+    line-height: 50px;
+}
+.navbox .nav-item a{
+    color: darkgrey;
+}
+.navbox .nav-item:hover{
+    background: rgba(3, 0, 0, 0.105);
+    transition: 0.5s;
+}
+.basic .profileicon img{
+    width: 2rem;
+}
+.dashhead{
+    font-weight: 700;
+}
